@@ -20,81 +20,36 @@ public class Main {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         
-        System.out.println("¿Que cuenta desea abrir?");
-            System.out.println("1 = Bancaria");
-            System.out.println("2 = Ahorro");
-            System.out.println("3 = Cheques");
-            int cuenta = entrada.nextInt();
-        
-        if (cuenta == 1){    
+           
         System.out.println("Proporcione el numero de la cuenta.");
         int numeroDeCuenta = entrada.nextInt();
         System.out.println("Proporcione el nombre del cliente.");
-        String cliente = entrada.next();
+        String nombre = entrada.next();
+        System.out.println("proporcione el apellido el cliente");
+        String apellido = entrada.next();
+        System.out.println("proporcione fechaDeNacimiento del cliente");
+        String fechaDeNacimiento = entrada.next();
+        System.out.println("proporcione direccion del cliente");
+        String direccion = entrada.next();
+        System.out.println("proporcione ocupacion del cliente ");
+        String ocupacion = entrada.next();
+        System.out.println("proporcione telefono del cliente");
+        String telefono = entrada.next();
+        System.out.println("proporcione email del cliente");
+        String email = entrada.next();
+        Cliente cliente= new Cliente (nombre,apellido);
+        
         CuentaBancaria nuevaCuenta = 
                 new CuentaBancaria(numeroDeCuenta,cliente);
         
-        System.out.println(nuevaCuenta.getSaldo());
-           nuevaCuenta.Depositar(200);
-            System.out.println(nuevaCuenta.getSaldo()); 
-            nuevaCuenta.Retirar(500);
-            System.out.println(nuevaCuenta.getSaldo());
-            nuevaCuenta.Depositar(1200);
-            System.out.println(nuevaCuenta.getSaldo()); 
-            nuevaCuenta.Depositar(700);
-            System.out.println(nuevaCuenta.getSaldo()); 
-            nuevaCuenta.Retirar(1500);
-            System.out.println(nuevaCuenta.getSaldo());
             
-        
-        }
-        
-        if(cuenta == 2){
-            System.out.println("Proporcione el numero de la cuenta.");
-            int numeroDeCuenta = entrada.nextInt();
-            System.out.println("Proporcione el nombre del cliente.");
-            String cliente = entrada.next();
-            CuentaDeAhorro nuevaCuenta = 
-                    new CuentaDeAhorro(numeroDeCuenta,cliente);
-            
-            System.out.println(nuevaCuenta.getSaldo());
-           nuevaCuenta.Depositar(200);
-            System.out.println(nuevaCuenta.getSaldo());
-            nuevaCuenta.corteMensual();
-            System.out.println(nuevaCuenta.getSaldo());    
-            nuevaCuenta.Retirar(500);
-            System.out.println(nuevaCuenta.getSaldo());
-            nuevaCuenta.corteMensual();
-            System.out.println(nuevaCuenta.getSaldo());
-        }
-        
-        if (cuenta == 3){    
-        System.out.println("Proporcione el numero de la cuenta.");
-        int numeroDeCuenta = entrada.nextInt();
-        System.out.println("Proporcione el nombre del cliente.");
-        String cliente = entrada.next();
-        CuentaDeCheques nuevaCuenta = 
-                new CuentaDeCheques(numeroDeCuenta,cliente);
- 
-        System.out.println(nuevaCuenta.getSaldo());
-           nuevaCuenta.Depositar(200);
-            System.out.println(nuevaCuenta.getSaldo()); 
-            nuevaCuenta.Retirar(500);
-            System.out.println(nuevaCuenta.getSaldo());
-            nuevaCuenta.Depositar(1200);
-            System.out.println(nuevaCuenta.getSaldo()); 
-            nuevaCuenta.Depositar(700);
-            System.out.println(nuevaCuenta.getSaldo()); 
-            nuevaCuenta.Retirar(1500);
-            System.out.println(nuevaCuenta.getSaldo());
-            nuevaCuenta.Retirar(100);
-            System.out.println(nuevaCuenta.getSaldo());
-            nuevaCuenta.Retirar(150);
-            System.out.println(nuevaCuenta.getSaldo());
-            nuevaCuenta.Retirar(2000);
-            System.out.println(nuevaCuenta.getSaldo());   
-        }
-    }   
+        System.out.println("el nombre del cliente es " + nombre );
+        System.out.println(" el  apellido del cliente es " + apellido );
+        System.out.println("la fecha de nacimiento del cliente es" + fechaDeNacimiento  );
+        System.out.println("la direccion el cliente es" + direccion);
+        System.out.println(" la ocupacion del cliente es " + ocupacion );
+        System.out.println("el telefono del cliente es" + telefono);
+        System.out.println("el email el cliente es "+ email);
     }
     
 }

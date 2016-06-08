@@ -1,6 +1,6 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template file, choose Tools
  * and open the template in the editor.
  */
 package demoherencia;
@@ -10,10 +10,10 @@ package demoherencia;
  * @author LUPITA
  */
 public class CuentaBancaria { private int numeroDeCuenta;
-    private String cliente;
+    private Cliente cliente;
     private double saldo;
     
-    public CuentaBancaria (int numeroDeCuenta, String cliente){
+    public CuentaBancaria (int numeroDeCuenta, Cliente cliente){
         this.cliente = cliente;
         this.numeroDeCuenta = numeroDeCuenta;
         this.saldo =0.0;
@@ -22,9 +22,7 @@ public class CuentaBancaria { private int numeroDeCuenta;
         this.numeroDeCuenta = numeroDeCuenta;
     }
     
-    private void Cliente(String cliente){
-        this.cliente = cliente;
-    }
+   
     
     public void Depositar(double cantidad){
         if (this.puedeDepositar(cantidad)){
